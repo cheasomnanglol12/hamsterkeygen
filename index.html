@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Generator</title>
+    <title>Hamster Code Generator 🐹 kalip</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+    <audio id="successSound" src="success-sound.mp3" preload="auto"></audio>
+    <audio id="errorSound" src="error-sound.mp3" preload="auto"></audio>
+    <audio id="completionSound" src="completion-sound.mp3" preload="auto"></audio>
+
     <div class="container">
-        <header>
-            <h1>Key Generator</h1>
-        </header>
-        <main>
-            <img src="https://via.placeholder.com/800x400?text=Game+Promo" alt="Game Promo" class="promo-image">
-            <div id="gameSelectGroup">
+        <h1>Hamster Key Generator 🐹🔑 kalip</h1>
+        <div id="formContainer">
+            <div class="form-group" id="gameSelectGroup">
                 <label for="gameSelect">Select Game:</label>
                 <select id="gameSelect">
                     <option value="1">Riding Extreme 3D</option>
@@ -22,41 +25,48 @@
                     <option value="4">Train Miner</option>
                 </select>
             </div>
-            <div id="keyCountGroup">
-                <label for="keyCountSelect">Number of Keys:</label>
+            <div class="form-group" id="keyCountGroup">
+                <label for="keyCountSelect">Select Number of Keys:</label>
                 <select id="keyCountSelect">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
                     <option value="10">10</option>
                 </select>
             </div>
-            <button id="startBtn">Start Generating</button>
-            <button id="generateMoreBtn">Generate More</button>
-            <button id="sourceCode">View Source Code</button>
+            <button id="startBtn">Generate Keys</button>
+        </div>
 
-            <div id="progressContainer" class="hidden">
-                <div id="progressBar" class="progress-bar"></div>
-                <p id="progressText">0%</p>
-                <p id="progressLog">Starting...</p>
+        <div id="progressContainer" class="hidden">
+            <div class="progress-bar">
+                <div id="progressBar"></div>
             </div>
+            <p id="progressText">0%</p>
+            <p id="progressLog">Starting...</p>
+        </div>
 
-            <div id="keyContainer" class="hidden">
-                <h2 id="generatedKeysTitle" class="hidden">Generated Keys:</h2>
-                <div id="keysList"></div>
-                <button id="copyAllBtn" class="hidden">Copy All Keys</button>
-                <div id="copyStatus" class="hidden">Copied!</div>
-            </div>
-        </main>
+        <div id="keyContainer" class="hidden">
+            <h2 id="generatedKeysTitle" class="hidden">Generated Keys</h2>
+            <div id="keysList"></div>
+            <button id="copyAllBtn" class="hidden">Copy All Keys</button>
+        </div>
+
+        <p id="keyCountLabel">Number of keys:</p>
+
+        <button id="generateMoreBtn" class="hidden">Generate More Keys</button>
+        <p id="copyStatus" class="hidden">Keys copied to clipboard!</p>
+        
+        <div class="footer">
+            <p>Disclaimer: This tool is for educational purposes only. Use responsibly.</p>
+            <button id="sourceCode">Source code</button>
+        </div>
     </div>
-
-    <!-- Sound Effects -->
-    <audio id="clickSound" src="click-sound.mp3"></audio>
-    <audio id="successSound" src="success-sound.mp3"></audio>
-    <audio id="errorSound" src="error-sound.mp3"></audio>
-    <audio id="completionSound" src="completion-sound.mp3"></audio>
 
     <script src="script.js"></script>
 </body>
