@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Key Generator</h1>
+        </header>
+        <main>
+            <img src="https://via.placeholder.com/800x400?text=Game+Promo" alt="Game Promo" class="promo-image">
+            <div id="gameSelectGroup">
+                <label for="gameSelect">Select Game:</label>
+                <select id="gameSelect">
+                    <option value="1">Riding Extreme 3D</option>
+                    <option value="2">Chain Cube 2048</option>
+                    <option value="3">My Clone Army</option>
+                    <option value="4">Train Miner</option>
+                </select>
+            </div>
+            <div id="keyCountGroup">
+                <label for="keyCountSelect">Number of Keys:</label>
+                <select id="keyCountSelect">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <button id="startBtn">Start Generating</button>
+            <button id="generateMoreBtn">Generate More</button>
+            <button id="sourceCode">View Source Code</button>
+
+            <div id="progressContainer" class="hidden">
+                <div id="progressBar" class="progress-bar"></div>
+                <p id="progressText">0%</p>
+                <p id="progressLog">Starting...</p>
+            </div>
+
+            <div id="keyContainer" class="hidden">
+                <h2 id="generatedKeysTitle" class="hidden">Generated Keys:</h2>
+                <div id="keysList"></div>
+                <button id="copyAllBtn" class="hidden">Copy All Keys</button>
+                <div id="copyStatus" class="hidden">Copied!</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sound Effects -->
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+    <audio id="successSound" src="success-sound.mp3"></audio>
+    <audio id="errorSound" src="error-sound.mp3"></audio>
+    <audio id="completionSound" src="completion-sound.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
